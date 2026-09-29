@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Role-Based Login</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="card">
+    <!-- 1. Login Container -->
+    <div id="login-container">
+      <h2>Sign In</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" />
+      </div>
+      <div class="button-group">
+        <button id="btn-login-admin" class="btn-admin">Login as Admin</button>
+        <button id="btn-login-viewer" class="btn-viewer">Login as Viewer</button>
+      </div>
+    </div>
+
+    <!-- 2 & 3. Dashboard Container (hidden by default) -->
+    <div id="dashboard-container" class="hidden">
+      <h2 id="welcome-message"></h2>
+
+      <!-- Role-specific content -->
+      <div id="admin-panel" class="hidden">
+        <span class="badge badge-admin">Administrator Mode</span>
+        <button id="btn-delete" class="btn-delete">Delete Post</button>
+      </div>
+
+      <div id="viewer-panel" class="hidden">
+        <span class="badge badge-viewer">Read-only access</span>
+      </div>
+
+      <!-- 4. Logout Button -->
+      <button id="btn-logout" class="btn-logout">Logout</button>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
